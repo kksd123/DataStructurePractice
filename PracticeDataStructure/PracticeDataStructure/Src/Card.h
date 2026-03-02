@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include <vector>
+#include "../Table/CSVReader.h"
 
 class Card
 {
@@ -12,9 +13,11 @@ class Card
 		int cost;
 		int rarity;
 	};
-
 public:
-	bool CreateTable();
+	Card();
+	~Card();
+
+	bool LoadFromeCSV(const std::string& filePath);
 
 	const std::vector<CardInfo> GetCardData() const
 	{
