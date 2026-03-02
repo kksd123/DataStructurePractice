@@ -5,6 +5,7 @@
 
 class Card
 {
+public:
 	struct CardInfo
 	{
 		int id;

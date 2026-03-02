@@ -139,11 +139,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Src\CardInventory.cpp" />
+    <ClCompile Include="Src\Card.cpp" />
     <ClCompile Include="Table\CSVReader.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Card.h" />
+    <ClInclude Include="Common\IKeyInputHandler.h" />
+    <ClInclude Include="Src\CardInventory.h" />
+    <ClInclude Include="Src\Card.h" />
     <ClInclude Include="Table\CSVReader.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -94,5 +94,5 @@ std::vector<std::string> CSVReader::ReadRow(std::ifstream &file, const char dete
 		row.push_back(ss.str());
 	}
 
-	return std::vector<std::string>();
+	return row;
 }

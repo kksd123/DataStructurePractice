@@ -1,6 +1,10 @@
 #include <iostream>
+#include "Src/CardInventory.h"
 
 int main()
 {
-	std::cin.get();
+	CardInventory inven;
+
+	inven.PrintCard();
+	inven.Run();
 }
