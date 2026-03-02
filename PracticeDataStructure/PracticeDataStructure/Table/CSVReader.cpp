@@ -19,9 +19,18 @@ bool CSVReader::ReadFile(const std::string& filePath)
 		return false;
 	}
 
+	if (file.good())
+	{
+		m_header = ReadRow(file, ',');
+	}
+
 	while (file.good())
 	{
-		ReadRow(file, ',');
+		std::vector<std::string> row = ReadRow(file, ',');
+		if (!row.empty())
+		{
+			m_readData.push_back(row);
+		}
 	}
 
 	file.close();
@@ -54,6 +63,35 @@ std::vector<std::string> CSVReader::ReadRow(std::ifstream &file, const char dete
 				inqutoes = false;
 			}
 		}
+		else if (c == detemine && !inqutoes)
+		{
+			//구분자 만나면 현재까지의 값을 셀로 저장
+			row.push_back(ss.str());
+			ss.str("");
+			ss.clear();
+		}
+		else if ((c == '\n' || c == '\r') && !inqutoes)
+		{
+			//줄바꿈 처리
+			if (c == '\r' && file.peek() == '\n')
+			{
+				file.get();
+			}
+
+			//마지막 셀에 저장
+			row.push_back(ss.str());
+			return row;
+		}
+		else
+		{
+			ss << c;
+		}
+	}
+
+	// 파일 끝에 줄바꿈 없이 끝나는 경우
+	if (ss.str().size() > 0)
+	{
+		row.push_back(ss.str());
 	}
 
 	return std::vector<std::string>();
