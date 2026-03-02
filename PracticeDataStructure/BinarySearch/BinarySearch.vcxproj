@@ -139,7 +139,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Common\BinarySearch.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Src\ScoreManager.cpp" />
     <ClCompile Include="Table\CSVReader.cpp" />

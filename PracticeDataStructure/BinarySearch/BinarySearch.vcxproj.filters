@@ -21,9 +21,6 @@
     <ClCompile Include="Main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Common\BinarySearch.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="Src\ScoreManager.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
