@@ -3,5 +3,5 @@
 struct PlayerData
 {
 	std::string name;
-	int score;
+	int score = 0;
 };

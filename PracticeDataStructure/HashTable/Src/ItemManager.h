@@ -2,6 +2,7 @@
 #include "../Common/IConsoleCommand.h"
 #include "../Src/ItemData.h"
 #include "../Table/CSVReader.h"
+#include "../Common/HashTable.h"
 
 class ItemManager : public IConsoleCommand
 {
@@ -20,5 +21,8 @@ protected:
 private:
 	//EnumClass ¥Î¿¿
 	std::string GetTypeName(int Type);
+
+private:
+	HashTable<ItemData> m_table;
 };
 

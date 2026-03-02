@@ -21,9 +21,6 @@
     <ClCompile Include="Main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Common\HashTable.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="Src\ItemManager.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>

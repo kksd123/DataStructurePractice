@@ -139,7 +139,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Common\HashTable.cpp" />
     <ClCompile Include="Src\ItemManager.cpp" />
     <ClCompile Include="Table\CSVReader.cpp" />
     <ClCompile Include="Main.cpp" />
