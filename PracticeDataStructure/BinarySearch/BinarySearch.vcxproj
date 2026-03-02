@@ -139,11 +139,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Common\BinarySearch.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Src\ScoreManager.cpp" />
     <ClCompile Include="Table\CSVReader.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Node.h" />
+    <ClInclude Include="Common\BinarySearch.h" />
+    <ClInclude Include="Common\IConsoleCommand.h" />
+    <ClInclude Include="Src\PlayerData.h" />
+    <ClInclude Include="Src\ScoreManager.h" />
     <ClInclude Include="Table\CSVReader.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
