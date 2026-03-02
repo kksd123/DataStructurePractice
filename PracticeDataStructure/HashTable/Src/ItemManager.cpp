@@ -27,6 +27,8 @@ bool ItemManager::LoadFromCSV(const std::string& filePath)
 			continue;
 
 		std::string key = row[0];
+		//공백 제거
+		key.erase(std::remove(key.begin(), key.end(), ' '), key.end());
 		ItemData itemData;
 		itemData.name = row[0];
 		itemData.type = std::stoi(row[1]);
